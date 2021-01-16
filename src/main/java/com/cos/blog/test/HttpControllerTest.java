@@ -38,6 +38,7 @@ public class HttpControllerTest {
 	public String putTest(@RequestBody Member m)
 	{
 		return "putTest 요청"+String.join(",", String.valueOf(m.getId()),m.getUsername(), m.getPassword(),m.getEmail());
+
 	}
 	@DeleteMapping("/http/delete")
 	public String deleteTest()
