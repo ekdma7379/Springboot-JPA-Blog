@@ -13,7 +13,19 @@ import javax.persistence.ManyToOne;
 
 import org.hibernate.annotations.ColumnDefault;
 import org.hibernate.annotations.CreationTimestamp;
-@Entity 
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+// ORM -> JAVA의 다른언어를 Object -> 테이블로 매핑시켜주는 기술
+@Entity // User 클래스가 MySQl에 테이블 생성됨 그래서 최대한 Class 정의 바로 위에 해주는것이 좋다
 public class Board {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY) // auto_increment
