@@ -34,7 +34,7 @@ public class User {
 	@GeneratedValue(strategy = GenerationType.IDENTITY) 
 	private int  id; // seq, auto_increment
 	
-	@Column(nullable = false, length = 30)
+	@Column(nullable = false, length = 30, unique = true)
 	private String username; // id
 	
 	@Column(nullable = false, length = 100) // 123456 => 해쉬 (나중에 해쉬로 변경하여 암호화)

@@ -24,7 +24,7 @@ spring:
   jpa:
     open-in-view: true
     hibernate:
-      ddl-auto: update #서버가 재시작되면 생성되어있던 테이블을 제거하고 다시 생성한다. 기존 테이블을 수정하려면 update 로 해야한다. 
+      ddl-auto: update #create : 서버가 재시작되면 생성되어있던 테이블을 제거하고 다시 생성한다. 기존 테이블을 수정하려면 update 로 해야한다. 
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl # Entity의 변수 이름대로 테이블에 필드를 만들어준다. 
       use-new-id-generator-mappings: false # JPA가 제공하는 기본 넘버링 전략을 사용하겠느냐 : 이번 강의에서는 NO!
