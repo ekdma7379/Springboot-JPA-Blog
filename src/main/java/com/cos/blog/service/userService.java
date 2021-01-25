@@ -28,14 +28,4 @@ public class userService {
 		}
 		return -1;
 	}
-	@Transactional(readOnly = true) // Select할 때 트랜잭션 시작, 서비스 종료시에까지 트랜잭션 종료(정합성 유지)
-	public User login(User user) {
-		try {
-			return userRepository.findByUsernameAndPassword(user.getUsername(),user.getPassword());
-		} catch (Exception e) {
-			e.printStackTrace();
-			System.out.println("userService : login() "+ e.getMessage());
-		}
-		return null;
-	}
 }

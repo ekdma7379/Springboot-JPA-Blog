@@ -19,7 +19,7 @@ public class UserApiController {
 	@Autowired
 	private userService userService;
 
-	@PostMapping("/auth/join")
+	@PostMapping("/auth/joinProc")
 	public ResponseDto<Integer> save(@RequestBody User user) {
 		user.setRole(RoleType.USER);
 		int result = userService.joinMember(user);
@@ -27,6 +27,7 @@ public class UserApiController {
 		return new ResponseDto<Integer>(HttpStatus.OK.value(), 1);
 	}
 
+	
 	// 이건 스프링 전통적인 로그인 처리방법
 //	@PostMapping("/api/user/login")
 //	public ResponseDto<Integer> login(@RequestBody User user, HttpSession session) {
